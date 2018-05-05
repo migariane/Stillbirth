@@ -12,5 +12,5 @@ Miguel Angel Luque-Fernandez, Aurielle Thomas, Bizu Gelaye, Judith Racape, Maria
 
 **Figure** Stillbirth rate of births ≥28 gestational weeks by maternal education in Spain from 2007–2015 (11,113 stillbirths and 4,083,919 total births)  
     
-![Figure Link](https://github.com/migariane/Stillbirth/Figure.png)  
+![Figure Link](https://github.com/migariane/Stillbirth/blob/master/Figure.png)  
 
