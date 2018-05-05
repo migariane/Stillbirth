@@ -10,5 +10,5 @@ Miguel Angel Luque-Fernandez, Aurielle Thomas, Bizu Gelaye, Judith Racape, Maria
 
 **KEYWORDS:** Perinatal Epidemiology, social epidemiology, stillbirth, population-based observational study, fetus at risk approach, Poisson regression, multiple imputation.
 
-**![Figure](Figure.tif).** Stillbirth rate of births ≥28 gestational weeks by maternal education in Spain from 2007–2015 (11,113 stillbirths and 4,083,919 total births) 
+**include_graphics(Figure.tif).** Stillbirth rate of births ≥28 gestational weeks by maternal education in Spain from 2007–2015 (11,113 stillbirths and 4,083,919 total births) 
 
