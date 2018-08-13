@@ -1,5 +1,5 @@
 
-## Decreasing Socioeconomic Inequalities on Stillbirth while Preserving Higher Risk Among Women with Lower Socioeconomic Status. How might it be possible?  
+## Secular Trends in Stillbirth by Maternal Socioeconomic Status in Spain 2007-2015: A  Population-Based Study of 4 million births      
 ### Authors    
 Miguel Angel Luque-Fernandez, Aurielle Thomas, Bizu Gelaye, Judith Racape, Maria Jose Sanchez-Perez, Michelle A. Williams 
 ### Abstract
