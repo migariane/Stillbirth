@@ -94,7 +94,7 @@ collapse (sum) stillbirth (sum) n, by(yeardlv)
 tabrate stillbirth yeardlv, exp(n) per 1000 trend
 restore
 
-// Univariate Rate Ratios (FETUSES-AT-RISK): Attributable risk and Population Attributable Risk (PAR)
+// Univariate Rate Ratios: Attributable risk and Population Attributable Risk (PAR)
 // Maternal age
 glm stillbirth ib2.mage2, exp(gweek) eform fam(pois) link(log)   
 // Maternal Education
@@ -230,17 +230,17 @@ tabrate stillbirth yeardlv if meduc ==`i', exp(n) per 1000 trend
 }
 restore
 
-// MULTIVARITE analysis: Fetuses at risk approach
+// MULTIVARITE analysis
 // Model 1
-glm stillbirth i.CatIHD
+glm stillbirth i.CatIHD, eform fam(pois) link(log) vce(robust)
 // Model 2
-glm stillbirth i.CatIHD ib2.mage2, exp(gweek) eform fam(pois) link(log)  
+glm stillbirth i.CatIHD ib2.mage2, eform fam(pois) link(log) vce(robust)
 // Model 3 
-glm stillbirth i.CatIHD ib2.mage2 ib3.meduc, exp(gweek) eform fam(pois) link(log)  
+glm stillbirth i.CatIHD ib2.mage2 ib3.meduc, eform fam(pois) link(log) vce(robust) 
 // Model 4
-glm stillbirth i.CatIHD ib2.mage2 ib3.meduc i.parity, exp(gweek) eform fam(pois) link(log)  
+glm stillbirth i.CatIHD ib2.mage2 ib3.meduc i.parity, eform fam(pois) link(log)  vce(robust)
 // Model 5
-glm stillbirth i.CatIHD ib2.mage2 ib3.meduc i.parity yeardlv, exp(gweek) eform fam(pois) link(log)  
+glm stillbirth i.CatIHD ib2.mage2 ib3.meduc i.parity yeardlv, eform fam(pois) link(log)  vce(robust)
 
 // Model 6 Multiple Imputation (FCS assuming MVN: 5 datasets imputed with AMELIA in R)
 * Keep substantive variables for imputation associated with gestation weeks at delivery 
@@ -307,7 +307,7 @@ restore
 ////////////////////////////////////////////////////////////////////////////////
 
 sumup gweek, by(stillbirth)
-glm stillbirth i.CatIHD ib1.mage2 ib3.meduc i.parity yeardlv, exp(gweek) eform fam(pois) link(log)  
+glm stillbirth i.CatIHD ib1.mage2 ib3.meduc i.parity yeardlv, eform fam(pois) link(log) vce(robust) 
 
 // Joint effects education and Human Development Index 
 lincom 1.meduc + 2.CatIHD, eform
@@ -326,7 +326,7 @@ lab def mage3 0"25-29" 1"<25" 2"30-34" 3">=35", replace
 lab val mage3 mage3
 tab mage3, miss
 
-glm stillbirth i.CatIHD i.mage3 ib3.meduc i.parity yeardlv, exp(gweek) eform fam(pois) link(log)  
+glm stillbirth i.CatIHD i.mage3 ib3.meduc i.parity yeardlv, eform fam(pois) link(log) vce(robust)
 
 // Joint effects education and age
 lincom 1.meduc + 1.mage3, eform
