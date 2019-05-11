@@ -85,11 +85,6 @@ tabrate stillbirth mcorigin, exp(n) per 1000 trend
 restore
 
 preserve
-collapse (sum) stillbirth (sum) n, by(catgweek)
-tabrate stillbirth catgweek, exp(n) per 1000 trend
-restore
-
-preserve
 collapse (sum) stillbirth (sum) n, by(yeardlv)
 tabrate stillbirth yeardlv, exp(n) per 1000 trend
 restore
